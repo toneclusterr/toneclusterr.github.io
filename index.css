@@ -145,7 +145,7 @@ main {
 }
 
 .f12gang a {
-  color: #fff; 
+  color: transparent; 
   text-decoration: none; 
   font-size: 1.5rem;
 }

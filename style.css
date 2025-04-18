@@ -1,4 +1,4 @@
-/* 全体的なスタイル */
+
 body {
   font-family: "Times New Roman", "游明朝", YuMincho, serif;
   margin: 0 auto;
@@ -12,7 +12,7 @@ body {
   box-sizing: border-box;
 }
 
-/* ナビゲーション */
+
 .site-nav {
   text-align: center;
   margin: 5rem 0;
@@ -22,9 +22,9 @@ body {
   list-style: none;
   padding: 0;
   margin: 0;
-  display: flex; /* flexboxを適用 */
-  justify-content: center; /* 中央寄せ */
-  flex-wrap: wrap; /* 折り返しを許可 */
+  display: flex; 
+  justify-content: center; 
+  flex-wrap: wrap; 
 }
 
 .site-nav ul li {
@@ -34,7 +34,7 @@ body {
 .site-nav ul li a {
   color: #000000;
   text-decoration: underline;
-  font-size: 1.5rem; /* 相対的なサイズ指定 */
+  font-size: 1.5rem; 
 }
 
 .site-nav ul li a:hover {

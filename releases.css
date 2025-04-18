@@ -1,5 +1,5 @@
 body {
-    font-size: 16px; /* デフォルトの文字サイズ */
+    font-size: 16px; 
 }
 
 .release {
@@ -11,7 +11,7 @@ main h1 {
 }
 
 .release h2 {
-    font-size: 1.5rem; /* サイズを大きく */
+    font-size: 1.5rem; 
 }
 
 .release .links ul {
@@ -43,25 +43,25 @@ nav ul li a {
 }
 
 .home-link {
-    font-size: 1rem; /* 文字を大きくする */
-    margin-bottom: 2rem; /* 下に空白を追加する */
-    display: block; /* リンクをブロック要素にする */
+    font-size: 1rem;
+    margin-bottom: 2rem; 
+    display: block; 
 }
 
 @media (min-width: 768px) {
     main h1 {
-      font-size: 9rem; /* PC版の見出し1のサイズ */
+      font-size: 9rem; 
     }
   
     .release h2 {
-      font-size: 5rem; /* PC版のリリースタイトルのサイズ */
+      font-size: 5rem; 
     }
   
     .release .description {
-      font-size: 1.5rem; /* PC版の説明文のサイズ */
+      font-size: 1.5rem; 
     }
   
     .home-link {
-        font-size: 1.5rem; /* PC版のホームリンクのサイズ */
+        font-size: 1.5rem; 
     }
   }

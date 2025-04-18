@@ -1,5 +1,5 @@
 body {
-    font-size: 16px; /* デフォルトの文字サイズ */
+    font-size: 16px; 
 }
 
 .instrumental-list {
@@ -8,12 +8,12 @@ body {
 
 .instrumental-list ul {
     list-style: none;
-    padding-left: 0; /* 左側のパディングを削除 */
-    margin-left: 0; /* 左側のマージンを削除 */
+    padding-left: 0; 
+    margin-left: 0; 
   }
 
   .instrumental-list ul li a {
-    font-size: 2rem; /* 文字サイズを1.2remに設定 */
+    font-size: 2rem; 
   }
   
 main h1 {
@@ -23,18 +23,18 @@ main h1 {
 
 
 .home-link {
-    font-size: 1rem; /* 文字を大きくする */
-    margin-bottom: 2rem; /* 下に空白を追加する */
-    display: block; /* リンクをブロック要素にする */
+    font-size: 1rem; 
+    margin-bottom: 2rem; 
+    display: block; 
 }
 
 @media (min-width: 768px) {
     main h1 {
-      font-size: 9rem; /* PC版の見出し1のサイズ */
+      font-size: 9rem; 
     }
   
   
     .home-link {
-      font-size: 1.5rem; /* PC版のホームリンクのサイズ */
+      font-size: 1.5rem; 
     }
   }

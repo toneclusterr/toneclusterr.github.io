@@ -1,80 +1,166 @@
+/* index.css */
+
 /* ヘッダー */
 header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 5px;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 縦方向中央揃え */
+  padding: 5px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.header-content {
+  display: flex;
+  align-items: center; /* 縦方向中央揃え */
+  justify-content: center; /* 横方向中央揃え */
+  flex-wrap: nowrap; /* 折り返し禁止 */
+  flex-direction: column; /* 縦並び */
+}
+
+.logo {
+  max-width: 70%; /* ロゴのサイズを70%に */
+  box-sizing: border-box;
+  flex-shrink: 0;
+  margin: 0 auto; /* 中央配置 */
+  margin-bottom: 10px; /* テキストとの間隔を狭める */
+}
+
+.logo img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.toneclusterr {
+  text-align: center; /* テキスト中央揃え */
+  width: 80%; /* テキスト全体の幅を調整 */
+  margin: 0 auto; /* テキストを中央に配置 */
+}
+
+.toneclusterr h1 {
+  font-size: 3rem; /* フォントサイズを調整 */
+  margin: 0;
+}
+
+.toneclusterr .email {
+  font-size: 1.2rem; /* フォントサイズを調整 */
+  margin-top: 0px;
+  margin-bottom: 0px;
+  color: #000000;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0 0;
+}
+
+nav ul li {
+  margin-bottom: 0.15rem;
+}
+
+nav ul li a {
+  font-size: 1rem;
+}
+
+/* メディアクエリ：PC向けのスタイル (画面幅が1000px以上) */
+@media (min-width: 1000px) {
   .header-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap; /* 折り返しを許可 */
+    flex-direction: row; /* 横並び */
+    align-items: center; /* 縦方向中央揃え */
+    justify-content: center; /* 横方向中央揃え */
   }
-  
+
   .logo {
-    max-width: 500px;
-    margin-right: 10px;
+    max-width: 80%; /* PCでのロゴのサイズを50%に */
+    margin-right: 20px; /* スペースを維持 */
+    margin-bottom: 0; /* 下マージンをリセット */
   }
-  
-  .logo img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
+
+  .toneclusterr {
+    width: 60%; /* PCでのテキスト全体の幅を調整 */
   }
-  
+
   .toneclusterr h1 {
-    font-size: 6rem;
-    margin: 0;
+    font-size: 7rem; /* PCでは大きく */
   }
-  
+
   .toneclusterr .email {
-    font-size: 1.5rem;
-    margin-top: -10px;
-    margin-bottom: 15px;
-    color: #000000;
+    font-size: 1.5rem; /* PCでは大きく */
   }
-  
-  nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 1rem 0 0 0;
-  }
-  
-  nav ul li {
-    margin-bottom: 0.15rem;
-  }
-  
+
   nav ul li a {
-    font-size: 1.5rem;
+    font-size: 1.5rem; /* PCでは大きく */
   }
-  
+}
 
-  @media (min-width: 1000px) {
-    .header-content {
-      flex-direction: row; /* 横並びにする */
-    }
-  
-    .logo {
-      margin-right: 20px; /* ロゴとテキストの間隔を調整 */
-    }
-  }
-  
-  main {
-    padding: 1rem;
-    text-align: center;
-  }
-  
-  .artwork img {
-    max-width: 70%;
-    height: auto;
-  }
+/* サイトナビゲーション（releases, works, instrumental） */
+.site-nav {
+  text-align: center;
+  margin: 1rem 0; /* 上下のマージンを調整 */
+}
 
-  .oh-you-cheated-xd ul li a {
-    color: #fff;
+.site-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex; /* flexboxを適用 */
+  justify-content: center; /* 中央寄せ */
+  flex-wrap: wrap; /* 折り返しを許可 */
+}
+
+.site-nav ul li {
+  margin: 0 1rem;
+}
+
+.site-nav ul li a {
+  color: #000000;
+  text-decoration: underline;
+  font-size: 1.5rem; /* 相対的なサイズ指定 */
+}
+
+.site-nav ul li a:hover {
+  color: #686868;
+}
+
+/* スマートフォン向けのスタイル (画面幅が1000px未満) */
+@media (max-width: 999px) {
+  .site-nav ul li a {
+    font-size: 1rem; /* スマートフォンでは小さく */
   }
-  
-  .oh-you-cheated-xd ul li a:visited {
-    color: #fff;
-  }
+}
+
+/* メインコンテンツ */
+main {
+  padding: 1rem;
+  text-align: center;
+}
+
+/* i love olswel のリンク */
+.olswel-container {
+  text-align: center;
+  margin-top: 5rem; /* 下に押しやる */
+  margin-bottom: 1rem;
+}
+
+.f12gangr a {
+  color: #fff; /* 背景色と同じ色にする */
+  text-decoration: none; /* 下線を削除 */
+  font-size: 1.5rem;
+}
+
+.f12gang a:visited {
+  color: #fff; /* 訪問済みのリンクの色も背景色と同じにする */
+}
+
+.artwork {
+  text-align: center; /* 画像を中央に配置 */
+}
+
+.artwork img {
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto; /* 画像を中央に配置 */
+  display: block; /* インライン要素のデフォルトの挙動を回避 */
+}

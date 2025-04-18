@@ -1,0 +1,45 @@
+.release {
+    margin-bottom: 5rem; 
+}
+  
+main h1 {
+    font-size: 5rem; 
+}
+
+.release h2 {
+    font-size: 3rem; /* サイズを大きく */
+}
+
+.release .links ul {
+    list-style: none; 
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li a {
+    font-size: 1.5rem;
+  }
+
+.release .description {
+    margin: 0.5rem 0;
+    padding: 0 1.25rem;
+    font-size: 1.5rem; 
+    line-height: 1.4;
+}
+  
+.video-container iframe,
+.video-container object,
+.video-container embed {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: 0 auto; 
+    width: 400px;
+    height: 300px;
+}
+
+.home-link {
+    font-size: 2rem; /* 文字を大きくする */
+    margin-bottom: 2rem; /* 下に空白を追加する */
+    display: block; /* リンクをブロック要素にする */
+}

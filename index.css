@@ -1,0 +1,80 @@
+/* ヘッダー */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+  }
+  
+  .header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; /* 折り返しを許可 */
+  }
+  
+  .logo {
+    max-width: 500px;
+    margin-right: 10px;
+  }
+  
+  .logo img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+  
+  .toneclusterr h1 {
+    font-size: 6rem;
+    margin: 0;
+  }
+  
+  .toneclusterr .email {
+    font-size: 1.5rem;
+    margin-top: -10px;
+    margin-bottom: 15px;
+    color: #000000;
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0 0;
+  }
+  
+  nav ul li {
+    margin-bottom: 0.15rem;
+  }
+  
+  nav ul li a {
+    font-size: 1.5rem;
+  }
+  
+
+  @media (min-width: 1000px) {
+    .header-content {
+      flex-direction: row; /* 横並びにする */
+    }
+  
+    .logo {
+      margin-right: 20px; /* ロゴとテキストの間隔を調整 */
+    }
+  }
+  
+  main {
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  .artwork img {
+    max-width: 70%;
+    height: auto;
+  }
+
+  .oh-you-cheated-xd ul li a {
+    color: #fff;
+  }
+  
+  .oh-you-cheated-xd ul li a:visited {
+    color: #fff;
+  }

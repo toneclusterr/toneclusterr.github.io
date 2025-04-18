@@ -1,0 +1,29 @@
+main h1 {
+    font-size: 5rem; 
+}
+
+
+.home-link {
+    font-size: 2rem; /* 文字を大きくする */
+    margin-bottom: 2rem; /* 下に空白を追加する */
+    display: block; /* リンクをブロック要素にする */
+}
+
+.instrumental-list ul {
+    list-style: none;  /* 黒い点を削除 */
+    padding: 0;
+    margin: 0;
+}
+
+.instrumental-list ul li a:visited {
+    color: #6a0dad; /* アクセス済みのリンクの色 */
+}
+
+.instrumental-list ul li {
+    margin-bottom: 20px; /*間隔を20pxにする*/
+}
+
+.instrumental-list ul li a {
+    font-size: 2em; /* 2em に変更 */
+    text-decoration: none;
+}

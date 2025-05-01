@@ -1,10 +1,10 @@
 /* index.css */
 
-/* ヘッダー */
+
 header {
   display: flex;
   flex-direction: column;
-  align-items: center; /* 縦方向中央揃え */
+  align-items: center; 
   padding: 5px;
   width: 100%;
   box-sizing: border-box;
@@ -12,18 +12,18 @@ header {
 
 .header-content {
   display: flex;
-  align-items: center; /* 縦方向中央揃え */
-  justify-content: center; /* 横方向中央揃え */
-  flex-wrap: nowrap; /* 折り返し禁止 */
-  flex-direction: column; /* 縦並び */
+  align-items: center; 
+  justify-content: center; 
+  flex-wrap: nowrap; 
+  flex-direction: column; 
 }
 
 .logo {
-  max-width: 70%; /* ロゴのサイズを70%に */
+  max-width: 70%; 
   box-sizing: border-box;
   flex-shrink: 0;
-  margin: 0 auto; /* 中央配置 */
-  margin-bottom: 10px; /* テキストとの間隔を狭める */
+  margin: 0 auto; 
+  margin-bottom: 10px; 
 }
 
 .logo img {

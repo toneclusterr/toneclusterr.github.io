@@ -1,0 +1,30 @@
+body {
+    font-size: 16px; 
+}
+
+.about {
+    margin-bottom: 4rem; 
+}
+  
+main h1 {
+    font-size: 3rem; 
+}
+
+
+
+.home-link {
+    font-size: 1rem; 
+    margin-bottom: 2rem; 
+    display: block; 
+}
+
+@media (min-width: 768px) {
+    main h1 {
+      font-size: 9rem; 
+    }
+  
+  
+    .home-link {
+        font-size: 1.5rem; 
+    }
+  }

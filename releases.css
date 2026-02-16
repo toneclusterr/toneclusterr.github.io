@@ -1,67 +1,114 @@
 body {
-    font-size: 16px; 
+    font-size: 16px;
 }
 
 .release {
-    margin-bottom: 4rem; 
+    margin-bottom: 4rem;
 }
-  
+
 main h1 {
-    font-size: 3rem; 
+    font-size: 3rem;
 }
 
 .release h2 {
-    font-size: 1.5rem; 
+    font-size: 1.5rem;
 }
 
 .release .links ul {
-    list-style: none; 
+    list-style: none;
     padding: 0;
     margin: 0;
 }
 
 nav ul li a {
     font-size: 1rem;
-  }
+}
 
 .release .description {
     margin: 0.5rem 0;
     padding: 0 1.25rem;
-    font-size: 1rem; 
+    font-size: 1rem;
     line-height: 1.4;
 }
-  
+
 .video-container iframe,
 .video-container object,
 .video-container embed {
     position: relative;
     top: 0;
     left: 0;
-    margin: 0 auto; 
+    margin: 0 auto;
     width: 400px;
     height: 300px;
 }
 
 .home-link {
     font-size: 1rem;
-    margin-bottom: 2rem; 
-    display: block; 
+    margin-bottom: 2rem;
+    display: block;
+}
+
+.toc {
+    margin-bottom: 2rem;
+}
+
+.toc summary {
+    cursor: pointer;
+    font-size: 3rem;
+    /* さらに大きく、インパクトのあるサイズに */
+    list-style: none;
+    /* 三角マーカーを消す場合 */
+    /* color: #0000EE; 黒文字に戻すため削除 */
+    /* text-decoration: underline; */
+}
+
+/* summaryのマーカーをカスタマイズしたい場合はこちら */
+.toc summary::-webkit-details-marker {
+    display: none;
+}
+
+.toc summary::after {
+    content: " +";
+}
+
+.toc[open] summary::after {
+    content: " -";
+}
+
+.toc ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 0.5rem;
+}
+
+.toc li {
+    margin-bottom: 0;
+    line-height: 1.1;
+}
+
+.toc a {
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.toc a:hover {
+    text-decoration: underline;
 }
 
 @media (min-width: 768px) {
     main h1 {
-      font-size: 9rem; 
+        font-size: 9rem;
     }
-  
+
     .release h2 {
-      font-size: 5rem; 
+        font-size: 5rem;
     }
-  
+
     .release .description {
-      font-size: 1.5rem; 
+        font-size: 1.5rem;
     }
-  
+
     .home-link {
-        font-size: 1.5rem; 
+        font-size: 1.5rem;
     }
-  }
+}

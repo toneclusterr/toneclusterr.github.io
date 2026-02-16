@@ -1,30 +1,90 @@
 body {
-    font-size: 16px; 
+    font-size: 16px;
 }
 
 .works {
-    margin-bottom: 4rem; 
+    margin-bottom: 4rem;
 }
-  
+
 main h1 {
-    font-size: 3rem; 
+    font-size: 3rem;
 }
 
 
 
 .home-link {
-    font-size: 1rem; 
-    margin-bottom: 2rem; 
-    display: block; 
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    display: block;
 }
 
 @media (min-width: 768px) {
     main h1 {
-      font-size: 9rem; 
+        font-size: 9rem;
     }
-  
-  
+
+
     .home-link {
-        font-size: 1.5rem; 
+        font-size: 1.5rem;
     }
-  }
+}
+
+.toc {
+    margin-bottom: 2rem;
+}
+
+.toc summary {
+    cursor: pointer;
+    font-size: 3rem;
+    /* さらに大きく、インパクトのあるサイズに */
+    list-style: none;
+    /* 三角マーカーを消す場合 */
+    /* color: #0000EE; 黒文字に戻すため削除 */
+    /* text-decoration: underline; */
+}
+
+/* summaryのマーカーをカスタマイズしたい場合はこちら */
+.toc summary::-webkit-details-marker {
+    display: none;
+}
+
+.toc summary::after {
+    content: " +";
+}
+
+.toc[open] summary::after {
+    content: " -";
+}
+
+.toc ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 0.5rem;
+}
+
+.toc li {
+    margin-bottom: 0;
+    line-height: 1.1;
+}
+
+.toc a {
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.toc a:hover {
+    text-decoration: underline;
+}
+
+/* release h2 のサイズ・太さ調整 (releases.cssの上書き) */
+.release h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+@media (min-width: 768px) {
+    .release h2 {
+        font-size: 3rem;
+        /* releases.cssの5remを上書き */
+    }
+}

@@ -12,6 +12,7 @@ main h1 {
 
 .release h2 {
     font-size: 1.5rem;
+    font-weight: bold;
 }
 
 .release .links ul {

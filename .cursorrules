@@ -1,0 +1,4 @@
+# Git Commit Messages
+- Always generate commit messages in English.
+- Use the conventional commits format (e.g., feat: ..., fix: ...).
+- Be concise and descriptive.

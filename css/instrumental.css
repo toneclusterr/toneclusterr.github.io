@@ -1,0 +1,40 @@
+body {
+    font-size: 16px; 
+}
+
+.instrumental-list {
+    margin-bottom: 4rem; 
+}
+
+.instrumental-list ul {
+    list-style: none;
+    padding-left: 0; 
+    margin-left: 0; 
+  }
+
+  .instrumental-list ul li a {
+    font-size: 2rem; 
+  }
+  
+main h1 {
+    font-size: 3rem; 
+}
+
+
+
+.home-link {
+    font-size: 1rem; 
+    margin-bottom: 2rem; 
+    display: block; 
+}
+
+@media (min-width: 768px) {
+    main h1 {
+      font-size: 9rem; 
+    }
+  
+  
+    .home-link {
+      font-size: 1.5rem; 
+    }
+  }

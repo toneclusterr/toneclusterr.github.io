@@ -1,4 +1,3 @@
-
 body {
   font-family: "Times New Roman", "游明朝", YuMincho, serif;
   margin: 0 auto;
@@ -22,9 +21,9 @@ body {
   list-style: none;
   padding: 0;
   margin: 0;
-  display: flex; 
-  justify-content: center; 
-  flex-wrap: wrap; 
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .site-nav ul li {
@@ -34,7 +33,7 @@ body {
 .site-nav ul li a {
   color: #000000;
   text-decoration: underline;
-  font-size: 1.5rem; 
+  font-size: 1.5rem;
 }
 
 .site-nav ul li a:hover {
@@ -49,4 +48,28 @@ body {
 
 .loading-text {
   font-size: 4rem;
+}
+
+/* --- レイヤー順序の調整（p5.jsのパーティクルとの重なり制御） --- */
+/* 文章、リンク、埋め込み(iframe)、リスト、summary(目次)はキャンバス(z-index:1)より前面に */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+iframe,
+a,
+ul,
+li,
+summary {
+  position: relative;
+  z-index: 2;
+}
+
+/* 画像はキャンバス(z-index:1)より背面に */
+img {
+  position: relative;
+  z-index: 0;
 }

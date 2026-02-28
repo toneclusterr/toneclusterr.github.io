@@ -1,0 +1,43 @@
+/* css/p5.css */
+
+body {
+    background-color: #000;
+    /* 黒背景でアーティスティックな雰囲気に */
+    color: #fff;
+    overflow: hidden;
+    /* スクロールバーが出ないようにする */
+}
+
+header {
+    margin-top: 2rem;
+    position: relative;
+    z-index: 10;
+    /* キャンバスの上にヘッダーを表示 */
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.home-link {
+    color: #fff;
+    /* ダークテーマ用に白文字にする */
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+#p5-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    /* 背景として配置 */
+    /* クリックイベントなどがキャンバスに行くようにポインターイベントはそのまま */
+}
+
+.starnotes {
+    margin: 1rem 0;
+}

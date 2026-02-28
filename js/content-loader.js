@@ -116,9 +116,14 @@ function buildReleasesHTML(rows) {
     // YouTube
     let videoHTML = '';
     if (row.youtube_id) {
+      let videoId = row.youtube_id;
+      const match = row.youtube_id.match(/(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))([\w-]{11})/);
+      if (match && match[1]) {
+        videoId = match[1];
+      }
       videoHTML = `
         <div class="video-container">
-          <iframe src="https://www.youtube.com/embed/${row.youtube_id}"
+          <iframe src="https://www.youtube.com/embed/${videoId}"
             title="${row.title}" frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -214,10 +219,51 @@ function buildWorksHTML(rows) {
         </nav>`;
     }
 
+    // YouTube
+    let videoHTML = '';
+    if (row.youtube_url) {
+      // URLからIDを抽出 (もしID直書きならそのまま使う)
+      let videoId = row.youtube_url;
+      const match = row.youtube_url.match(/(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))([\w-]{11})/);
+      if (match && match[1]) {
+        videoId = match[1];
+      }
+      videoHTML = `
+        <div class="video-container">
+          <iframe src="https://www.youtube.com/embed/${videoId}"
+            title="${row.title}" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>`;
+    } else if (row.niconico_url) {
+      // ニコニコ動画の埋め込み (youtubeが優先、無ければニコニコ)
+      // URLからID(smXXX等)を抽出 (もしID直書きならそのまま使う)
+      let videoId = row.niconico_url;
+      const match = row.niconico_url.match(/nicovideo\.jp\/watch\/([a-zA-Z0-9]+)/);
+      if (match && match[1]) {
+        videoId = match[1];
+      }
+      // ニコニコ動画の外部プレイヤー仕様 (scriptタグではなくiframeで直接呼び出し、YouTubeと同じサイズにするためvideo-containerを使用)
+      videoHTML = `
+        <div class="video-container">
+          <iframe src="https://embed.nicovideo.jp/watch/${videoId}?jsapi=1"
+            title="${row.title}" frameborder="0" allowfullscreen></iframe>
+        </div>`;
+    }
+
+    // description (改行対応: | → <br>)
+    const desc = row.description
+      ? row.description
+        .split('|')
+        .map(s => s.trim())
+        .join('<br>')
+      : '';
+
     sectionsHTML += `
       <section class="release" id="${row.id}">
         <h2>${row.title}</h2>
-        <p class="description">${row.description || ''}</p>
+        ${videoHTML}
+        <p class="description">${desc}</p>
         ${linkHTML}
       </section>
 

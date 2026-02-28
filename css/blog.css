@@ -2,7 +2,7 @@ body {
     font-size: 16px;
 }
 
-.works {
+.blog {
     margin-bottom: 4rem;
 }
 
@@ -80,4 +80,8 @@ main h1 {
     .release h2 {
         font-size: 3rem;
     }
+}
+
+.release .description {
+    font-size: 1rem;
 }

@@ -56,14 +56,9 @@ nav ul li a {
 .toc summary {
     cursor: pointer;
     font-size: 3rem;
-    /* さらに大きく、インパクトのあるサイズに */
     list-style: none;
-    /* 三角マーカーを消す場合 */
-    /* color: #0000EE; 黒文字に戻すため削除 */
-    /* text-decoration: underline; */
 }
 
-/* summaryのマーカーをカスタマイズしたい場合はこちら */
 .toc summary::-webkit-details-marker {
     display: none;
 }

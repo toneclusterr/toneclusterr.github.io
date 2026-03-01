@@ -1,36 +1,28 @@
-// p5.js global interactive background
-// This runs on all pages except p5.html
-
 let siteParticles = [];
 
 function setup() {
     let canvas = createCanvas(windowWidth, windowHeight);
-    canvas.position(0, 0); // 固定位置
-    canvas.style('position', 'fixed'); // スクロールしても追従する
-    canvas.style('z-index', '1'); // 画像(0)と文字(2)の間に配置
-    canvas.style('pointer-events', 'none'); // クリックを下の要素にパスする
+    canvas.position(0, 0);
+    canvas.style('position', 'fixed');
+    canvas.style('z-index', '1');
+    canvas.style('pointer-events', 'none');
 
-    // 背景を透明にする
     clear();
 }
 
 function draw() {
-    // 毎フレーム全体をクリア（透明背景での残像効果は難しいため、シンプルに消える効果のみ）
     clear();
 
-    // パーティクルの更新と描画
     for (let i = siteParticles.length - 1; i >= 0; i--) {
         let p = siteParticles[i];
         p.update();
         p.display();
-        // 寿命が尽きたら配列から削除
         if (p.isDead()) {
             siteParticles.splice(i, 1);
         }
     }
 }
 
-// マウスを動かしたときにパーティクルを生成
 function mouseMoved() {
     let speed = dist(mouseX, mouseY, pmouseX, pmouseY);
 
@@ -42,7 +34,6 @@ function mouseMoved() {
     }
 }
 
-// クリック長押し（ドラッグ）でも生成
 function mouseDragged() {
     let speed = dist(mouseX, mouseY, pmouseX, pmouseY);
 
@@ -54,13 +45,11 @@ function mouseDragged() {
     }
 }
 
-// ウィンドウがリサイズされたらキャンバスも合わせる
 function windowResized() {
     resizeCanvas(windowWidth, windowHeight);
     clear();
 }
 
-// --- パーティクルクラス ---
 class SiteParticle {
     constructor(x, y, speed) {
         this.pos = createVector(x, y);

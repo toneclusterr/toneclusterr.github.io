@@ -1,5 +1,7 @@
 body {
     font-size: 16px;
+    background-color: #000;
+    color: #fff;
 }
 
 .blog {
@@ -10,12 +12,25 @@ main h1 {
     font-size: 3rem;
 }
 
+/* --- ダークテーマ用のリンク色上書き --- */
+a,
+nav ul li a,
+.toc a,
+.home-link {
+    color: #fff !important;
+}
 
+/* --- ダークテーマ用のリンク色上書き --- */
+a,
+nav ul li a {
+    color: #fff;
+}
 
 .home-link {
     font-size: 1rem;
     margin-bottom: 2rem;
     display: block;
+    color: #fff;
 }
 
 @media (min-width: 768px) {
@@ -23,6 +38,9 @@ main h1 {
         font-size: 9rem;
     }
 
+    nav ul li a {
+        color: #fff;
+    }
 
     .home-link {
         font-size: 1.5rem;
@@ -65,10 +83,12 @@ main h1 {
 .toc a {
     text-decoration: none;
     font-size: 1rem;
+    color: #fff;
 }
 
 .toc a:hover {
     text-decoration: underline;
+    color: #ccc;
 }
 
 .release h2 {

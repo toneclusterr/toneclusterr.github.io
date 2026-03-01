@@ -361,7 +361,7 @@ function buildBlogHTML(rows) {
     descContents.forEach((lineHTML, i) => {
       descHTML += lineHTML;
       if (i < descContents.length - 1) {
-        if (!lineHTML.startsWith('<div') && !lineHTML.startsWith('<img') && lineHTML !== '') {
+        if (!lineHTML.startsWith('<div') && !lineHTML.startsWith('<img')) {
           descHTML += '<br>';
         }
       }

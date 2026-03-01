@@ -32,10 +32,23 @@
         <p class="starnotes">☆♫☆
         </p>
 
+        <div style="text-align: center; margin-bottom: 30px; line-height: 1.6;">
+            left click: reveal<br>
+            right click: flag
+        </div>
+
+        <div id="p5-container" style="margin-bottom: 30px; display: flex; justify-content: center;">
+        </div>
+
         <a href="index.html" class="home-link">home</a>
     </main>
+    <script>
+        // 背景モードではなく、特定のdiv（#p5-container）内に埋め込むモードを指定
+        var isBackgroundMode = false;
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
     <script src="js/site-p5-sketch.js"></script>
+    <script src="js/minesweeper.js"></script>
 </body>
 
 </html>

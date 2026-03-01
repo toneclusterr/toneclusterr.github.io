@@ -14,15 +14,27 @@ var totalBees = 15;
 var firstClick = true;
 var gameWon = false;
 
+// 背景モードか、埋め込みモードかを制御するフラグ（HTML側から上書き可能）
+if (typeof isBackgroundMode === 'undefined') {
+    var isBackgroundMode = true;
+}
+
 let siteParticles = [];
 
 function setup() {
-    let canvas = createCanvas(windowWidth, windowHeight);
+    let canvas;
+    if (isBackgroundMode) {
+        canvas = createCanvas(windowWidth, windowHeight);
+        canvas.position(0, 0);
+        canvas.style('position', 'fixed');
+        canvas.style('z-index', '1');
+    } else {
+        // 埋め込みモード: 指定された幅×高さを確保
+        let gridW = cols * w;
+        let gridH = rows * w;
+        canvas = createCanvas(gridW, gridH);
+    }
     canvas.parent('p5-container');
-
-    canvas.position(0, 0);
-    canvas.style('position', 'fixed');
-    canvas.style('z-index', '1');
 
     canvas.elt.addEventListener('contextmenu', e => e.preventDefault());
 
@@ -35,7 +47,9 @@ function setup() {
 }
 
 function windowResized() {
-    resizeCanvas(windowWidth, windowHeight);
+    if (isBackgroundMode) {
+        resizeCanvas(windowWidth, windowHeight);
+    }
 }
 
 function gameOver() {

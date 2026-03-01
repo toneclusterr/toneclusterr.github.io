@@ -14,7 +14,6 @@ var totalBees = 15;
 var firstClick = true;
 var gameWon = false;
 
-// 背景モードか、埋め込みモードかを制御するフラグ（HTML側から上書き可能）
 if (typeof isBackgroundMode === 'undefined') {
     var isBackgroundMode = true;
 }
@@ -29,7 +28,6 @@ function setup() {
         canvas.style('position', 'fixed');
         canvas.style('z-index', '1');
     } else {
-        // 埋め込みモード: 指定された幅×高さを確保
         let gridW = cols * w;
         let gridH = rows * w;
         canvas = createCanvas(gridW, gridH);

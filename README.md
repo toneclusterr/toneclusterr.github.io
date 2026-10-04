@@ -1,6 +1,6 @@
 [# toneclusterr.github.io](https://toneclusterr.github.io/)
 
-ここにたどり着く人、パソコンくんすぎる。。。
+ここにたどり着く人、すごい。
 プレゼント置いときます
 
 seisei 2011のinstです

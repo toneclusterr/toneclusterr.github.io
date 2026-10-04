@@ -83,10 +83,11 @@ function buildReleasesHTML(rows) {
     }
 
     let instHTML = '';
-    if (row.inst_mp3) {
-      const filename = row.inst_mp3.split('/').pop();
+    if (row.inst_mp3 && row.inst_mp3.trim()) {
+      const cleanPath = row.inst_mp3.trim();
+      const filename = cleanPath.split('/').pop();
       instHTML = `<p>♫ inst ♫</p>
-        <li><a href="${row.inst_mp3}" download="${filename}">${filename.replace('.mp3', '')}</a></li>`;
+        <li><a href="${cleanPath}" download="${filename}">${filename.replace('.mp3', '')}</a></li>`;
     }
 
     let creditsHTML = '';
